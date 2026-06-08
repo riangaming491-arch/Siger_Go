@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siger Go - Smart Tourism</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="logo siger.png" alt="Logo Siger">
+        <span>SIGER GO</span>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#ticket">E-Ticket</a></li>
+            <li><a href="#validasi">Validasi Tiket</a></li>
+            <li><a href="#audio">Audio Guide</a></li>
+            <li><a href="#ar">AR Budaya</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#budaya">Konten Budaya</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>MENARA SIGER</h1>
+        <p>Smart Tourism & Cultural Experience System</p>
+        <a href="#ticket" class="btn">Pesan Tiket</a>
+    </div>
+</section>
+
+<section id="about" class="container">
+    <h2>Tentang Siger Go</h2>
+
+    <div class="about-content">
+        <img src="menarasiger.jpg">
+
+        <div>
+            <p>
+            Menara Siger merupakan salah satu ikon wisata dan budaya paling terkenal
+            di Provinsi Lampung yang terletak di kawasan Bakauheni, Lampung Selatan.
+            Bangunan megah ini berdiri di atas perbukitan yang menghadap langsung
+            ke Selat Sunda sehingga menawarkan pemandangan alam yang sangat indah
+            dan memukau. Bentuk bangunan Menara Siger terinspirasi dari mahkota adat
+            wanita Lampung yang dikenal dengan nama Siger, yang melambangkan
+            kehormatan, kebesaran, dan identitas masyarakat Lampung.
+            </p>
+
+            <p>
+            Sebagai gerbang utama Pulau Sumatera, Menara Siger tidak hanya menjadi
+            tempat wisata yang menarik, tetapi juga berfungsi sebagai simbol
+            persatuan, kebudayaan, dan kebanggaan masyarakat Lampung. Setiap tahun,
+            ribuan wisatawan dari berbagai daerah datang untuk menikmati panorama
+            laut, mengabadikan momen di berbagai spot foto yang menarik, serta
+            mempelajari sejarah dan budaya Lampung yang kaya akan nilai tradisi.
+            </p>
+
+            <p>
+            Melalui platform Siger Go, pengalaman wisata di Menara Siger menjadi
+            lebih modern dan interaktif. Wisatawan dapat melakukan pembelian tiket
+            secara digital, memperoleh informasi wisata dengan mudah, menikmati
+            fitur Smart Audio Guide, serta mengakses informasi budaya Lampung
+            melalui teknologi digital. Inovasi ini diharapkan dapat meningkatkan
+            kualitas pelayanan wisata sekaligus memperkenalkan kekayaan budaya
+            Lampung kepada masyarakat Indonesia maupun wisatawan mancanegara.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="ticket" class="container">
+    <h2>E-Ticket Menara Siger</h2>
+
+    <form id="ticketForm">
+
+        <input type="text" placeholder="Nama Lengkap" required>
+
+        <input type="date" required>
+
+        <select required>
+            <option value="">Pilih Paket</option>
+            <option>Reguler - Rp25.000</option>
+            <option>Keluarga - Rp75.000</option>
+            <option>VIP - Rp100.000</option>
+        </select>
+
+        <button type="submit">Pesan Tiket</button>
+
+    </form>
+</section>
+
+<section id="validasi" class="container">
+
+    <h2>Validasi QR Tiket Masuk</h2>
+
+    <div class="card">
+
+        <p>
+            Scan QR Tiket untuk masuk ke kawasan wisata
+            Menara Siger.
+        </p>
+
+         <img src="qr-tiket.png" width="200">
+
+        <p>QR Tiket Menara Siger</p>
+
+        <div id="readerTiket"></div>
+
+        <div id="hasilTiket"></div>
+
+    </div>
+
+</section>
+
+<section id="audio" class="container">
+    <h2>Smart Audio Guide</h2>
+
+    <div class="card">
+        <h3>🎧 Audio Guide Otomatis</h3>
+
+        <p>
+            Dengarkan sejarah Menara Siger dan budaya Lampung
+            melalui panduan audio digital.
+        </p>
+
+        <button onclick="playAudio()">Putar Audio</button>
+
+        <audio id="audioGuide">
+            <source src="Fakta Menarik Tentang Menara Siger Ikon Provinsi Lampung.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</section>
+
+<section id="ar" class="container">
+
+    <h2>AR Scan Budaya</h2>
+    
+    <div class="card">
+
+        <h3>QR Demo</h3>
+
+        <img src="qr-code-mahkota.png" width="200">
+        <p>Scan QR ini untuk melihat informasi Mahkota Siger</p>
+
+        <img src="qr-code-kain tapis lampung.png" width="200">
+        <p>Scan QR ini untuk melihat informasi Kain Tapis Lampung</p>
+
+        <img src="qr-code-rumah adat lampung.png" width="200">
+        <p>Scan QR ini untuk melihat informasi Rumah Adat Lampung</p>
+
+        <img src="qr-code-menara siger.png" width="200">
+        <p>Scan QR ini untuk melihat informasi Menara Siger</p>
+        <br>
+        <p>
+            Scan QR Code objek budaya untuk melihat informasi budaya Lampung.
+        </p>
+
+        <div id="reader"></div>
+
+        <div id="hasilBudaya"></div>
+
+    </div>
+
+</section>
+
+<section id="gallery" class="container">
+    <h2>Galeri Menara Siger</h2>
+
+    <div class="gallery">
+
+        <img src="GaleriMenaraSiger1.jpg">
+        <img src="GaleriMenaraSiger2.jpg">
+        <img src="GaleriMenaraSiger3.jpg">
+        <img src="GaleriMenaraSiger4.jpg">
+
+    </div>
+</section>
+
+<section id="dashboard" class="container">
+
+    <h2>Dashboard Pengunjung</h2>
+
+    <div class="stats">
+
+        <div class="stat-box">
+            <h3>25.000+</h3>
+            <p>Total Pengunjung</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>1.500+</h3>
+            <p>Tiket Terjual</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>500+</h3>
+            <p>Review Positif</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="budaya" class="container">
+
+    <h2>Konten Budaya Lampung</h2>
+
+    <div class="card">
+
+        <h3>👑 Mahkota Siger</h3>
+        <p>Simbol kebesaran dan kehormatan masyarakat Lampung.</p>
+
+        <h3>🧵 Kain Tapis Lampung</h3>
+        <p>Kain tradisional khas Lampung dengan sulaman benang emas.</p>
+
+        <h3>🏠 Rumah Adat Lampung</h3>
+        <p>Rumah tradisional yang menjadi identitas budaya Lampung.</p>
+
+        <h3>🏛 Menara Siger</h3>
+        <p>Ikon Provinsi Lampung yang berada di Bakauheni.</p>
+
+    </div>
+
+</section>
+
+<section id="contact" class="container">
+    <h2>Kontak</h2>
+
+    <p>📍 Bakauheni, Lampung Selatan</p>
+    <p>📞 0882-7659-2794</p>
+    <p>✉ Riangaming491@sigergo.com</p>
+</section>
+
+<footer>
+    <p>© 2026 SIGER GO</p>
+</footer>
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script src="script.js"></script>
+
+<script>
+if(localStorage.getItem("login") !== "true"){
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
